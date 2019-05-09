@@ -122,10 +122,6 @@ public class Start extends JFrame {
 
 		contentPane.add(btnNewFlight);
 
-		JButton btnNeuerPassagier = new JButton("Neuer Passagier");
-		btnNeuerPassagier.setBounds(155, 244, 136, 29);
-		contentPane.add(btnNeuerPassagier);
-
 		btnTicketBuchen = new JButton("Ticket buchen");
 		btnTicketBuchen.setEnabled(false);
 		btnTicketBuchen.addMouseListener(new MouseAdapter() {
