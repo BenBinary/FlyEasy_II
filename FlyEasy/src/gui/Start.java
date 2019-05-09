@@ -33,6 +33,7 @@ public class Start extends JFrame {
 	private JPanel contentPane;
 	FlugVerwaltung verwaltung = new FlugVerwaltung();
 	static JList listFlights = new JList();
+	JButton btnTicketBuchen; 
 
 	/**
 	 * Launch the application.
@@ -85,8 +86,12 @@ public class Start extends JFrame {
 				listFlights.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseClicked(MouseEvent e) {
+						
+						
 		
 						try {
+							
+							btnTicketBuchen.setEnabled(true);
 							FlightDetail frame = new FlightDetail((Flug)listFlights.getSelectedValue());
 							frame.setVisible(true);
 						} catch (Exception e1) {
@@ -121,9 +126,23 @@ public class Start extends JFrame {
 		btnNeuerPassagier.setBounds(155, 244, 136, 29);
 		contentPane.add(btnNeuerPassagier);
 
-		JButton btnNeueBuchung = new JButton("Neue Buchung");
-		btnNeueBuchung.setBounds(303, 244, 117, 29);
-		contentPane.add(btnNeueBuchung);
+		btnTicketBuchen = new JButton("Ticket buchen");
+		btnTicketBuchen.setEnabled(false);
+		btnTicketBuchen.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				try {
+					NewTicket frame = new NewTicket((Flug)listFlights.getSelectedValue());
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+			}
+		});
+		btnTicketBuchen.setBounds(303, 244, 117, 29);
+		contentPane.add(btnTicketBuchen);
 
 		JButton btnRefresh = new JButton("Aktualisieren");
 		btnRefresh.addMouseListener(new MouseAdapter() {

@@ -67,9 +67,9 @@ public class NewTicket extends JFrame {
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 0};
-		gbl_contentPane.rowHeights = new int[]{47, 0, 47, 0, 47, 47, 47, 47, 47, 47, 0, 0, 0, 0, 0, 0};
+		gbl_contentPane.rowHeights = new int[]{47, 0, 47, 0, 0, 47, 47, 47, 47, 47, 47, 0, 0, 0, 0, 0, 0, 0};
 		gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
 		JLabel label = new JLabel("");
@@ -234,6 +234,7 @@ public class NewTicket extends JFrame {
 		
 		JLabel lblBusiness = new JLabel("BUSINESS");
 		GridBagConstraints gbc_lblBusiness = new GridBagConstraints();
+		gbc_lblBusiness.gridwidth = 5;
 		gbc_lblBusiness.insets = new Insets(0, 0, 5, 5);
 		gbc_lblBusiness.gridx = 2;
 		gbc_lblBusiness.gridy = 3;
@@ -244,7 +245,7 @@ public class NewTicket extends JFrame {
 		gbc_label_21.fill = GridBagConstraints.BOTH;
 		gbc_label_21.insets = new Insets(0, 0, 5, 5);
 		gbc_label_21.gridx = 0;
-		gbc_label_21.gridy = 4;
+		gbc_label_21.gridy = 5;
 		contentPane.add(label_21, gbc_label_21);
 		
 		JLabel label_11 = new JLabel("");
@@ -252,7 +253,7 @@ public class NewTicket extends JFrame {
 		gbc_label_11.fill = GridBagConstraints.BOTH;
 		gbc_label_11.insets = new Insets(0, 0, 5, 5);
 		gbc_label_11.gridx = 1;
-		gbc_label_11.gridy = 4;
+		gbc_label_11.gridy = 5;
 		contentPane.add(label_11, gbc_label_11);
 		
 		Button button = new Button("X");
@@ -261,7 +262,7 @@ public class NewTicket extends JFrame {
 		gbc_button.fill = GridBagConstraints.BOTH;
 		gbc_button.insets = new Insets(0, 0, 5, 5);
 		gbc_button.gridx = 2;
-		gbc_button.gridy = 4;
+		gbc_button.gridy = 5;
 		contentPane.add(button, gbc_button);
 		
 		Button button_6 = new Button("X");
@@ -270,7 +271,7 @@ public class NewTicket extends JFrame {
 		gbc_button_6.fill = GridBagConstraints.BOTH;
 		gbc_button_6.insets = new Insets(0, 0, 5, 5);
 		gbc_button_6.gridx = 3;
-		gbc_button_6.gridy = 4;
+		gbc_button_6.gridy = 5;
 		contentPane.add(button_6, gbc_button_6);
 		
 		JLabel label_22 = new JLabel("");
@@ -278,7 +279,7 @@ public class NewTicket extends JFrame {
 		gbc_label_22.fill = GridBagConstraints.BOTH;
 		gbc_label_22.insets = new Insets(0, 0, 5, 5);
 		gbc_label_22.gridx = 4;
-		gbc_label_22.gridy = 4;
+		gbc_label_22.gridy = 5;
 		contentPane.add(label_22, gbc_label_22);
 		
 		Button button_7 = new Button("X");
@@ -287,7 +288,7 @@ public class NewTicket extends JFrame {
 		gbc_button_7.fill = GridBagConstraints.BOTH;
 		gbc_button_7.insets = new Insets(0, 0, 5, 5);
 		gbc_button_7.gridx = 5;
-		gbc_button_7.gridy = 4;
+		gbc_button_7.gridy = 5;
 		contentPane.add(button_7, gbc_button_7);
 		
 		Button button_8 = new Button("X");
@@ -296,7 +297,7 @@ public class NewTicket extends JFrame {
 		gbc_button_8.fill = GridBagConstraints.BOTH;
 		gbc_button_8.insets = new Insets(0, 0, 5, 5);
 		gbc_button_8.gridx = 6;
-		gbc_button_8.gridy = 4;
+		gbc_button_8.gridy = 5;
 		contentPane.add(button_8, gbc_button_8);
 		
 		JLabel label_23 = new JLabel("");
@@ -304,7 +305,7 @@ public class NewTicket extends JFrame {
 		gbc_label_23.fill = GridBagConstraints.BOTH;
 		gbc_label_23.insets = new Insets(0, 0, 5, 5);
 		gbc_label_23.gridx = 7;
-		gbc_label_23.gridy = 4;
+		gbc_label_23.gridy = 5;
 		contentPane.add(label_23, gbc_label_23);
 		
 		JCheckBox chckbxEconomy = new JCheckBox("Economy");
@@ -312,7 +313,7 @@ public class NewTicket extends JFrame {
 		gbc_chckbxEconomy.fill = GridBagConstraints.BOTH;
 		gbc_chckbxEconomy.insets = new Insets(0, 0, 5, 5);
 		gbc_chckbxEconomy.gridx = 8;
-		gbc_chckbxEconomy.gridy = 4;
+		gbc_chckbxEconomy.gridy = 5;
 		contentPane.add(chckbxEconomy, gbc_chckbxEconomy);
 		
 		JLabel label_24 = new JLabel("");
@@ -320,7 +321,7 @@ public class NewTicket extends JFrame {
 		gbc_label_24.fill = GridBagConstraints.BOTH;
 		gbc_label_24.insets = new Insets(0, 0, 5, 0);
 		gbc_label_24.gridx = 9;
-		gbc_label_24.gridy = 4;
+		gbc_label_24.gridy = 5;
 		contentPane.add(label_24, gbc_label_24);
 		
 		JLabel label_25 = new JLabel("");
@@ -328,7 +329,7 @@ public class NewTicket extends JFrame {
 		gbc_label_25.fill = GridBagConstraints.BOTH;
 		gbc_label_25.insets = new Insets(0, 0, 5, 5);
 		gbc_label_25.gridx = 0;
-		gbc_label_25.gridy = 5;
+		gbc_label_25.gridy = 6;
 		contentPane.add(label_25, gbc_label_25);
 		
 		JLabel label_26 = new JLabel("");
@@ -336,7 +337,7 @@ public class NewTicket extends JFrame {
 		gbc_label_26.fill = GridBagConstraints.BOTH;
 		gbc_label_26.insets = new Insets(0, 0, 5, 5);
 		gbc_label_26.gridx = 1;
-		gbc_label_26.gridy = 5;
+		gbc_label_26.gridy = 6;
 		contentPane.add(label_26, gbc_label_26);
 		
 		Button btn1 = new Button("X");
@@ -345,7 +346,7 @@ public class NewTicket extends JFrame {
 		gbc_btn1.fill = GridBagConstraints.BOTH;
 		gbc_btn1.insets = new Insets(0, 0, 5, 5);
 		gbc_btn1.gridx = 2;
-		gbc_btn1.gridy = 5;
+		gbc_btn1.gridy = 6;
 		contentPane.add(btn1, gbc_btn1);
 		
 		Button button_5 = new Button("X");
@@ -354,7 +355,7 @@ public class NewTicket extends JFrame {
 		gbc_button_5.fill = GridBagConstraints.BOTH;
 		gbc_button_5.insets = new Insets(0, 0, 5, 5);
 		gbc_button_5.gridx = 3;
-		gbc_button_5.gridy = 5;
+		gbc_button_5.gridy = 6;
 		contentPane.add(button_5, gbc_button_5);
 		
 		JLabel label_27 = new JLabel("");
@@ -362,7 +363,7 @@ public class NewTicket extends JFrame {
 		gbc_label_27.fill = GridBagConstraints.BOTH;
 		gbc_label_27.insets = new Insets(0, 0, 5, 5);
 		gbc_label_27.gridx = 4;
-		gbc_label_27.gridy = 5;
+		gbc_label_27.gridy = 6;
 		contentPane.add(label_27, gbc_label_27);
 		
 		Button button_9 = new Button("X");
@@ -371,7 +372,7 @@ public class NewTicket extends JFrame {
 		gbc_button_9.fill = GridBagConstraints.BOTH;
 		gbc_button_9.insets = new Insets(0, 0, 5, 5);
 		gbc_button_9.gridx = 5;
-		gbc_button_9.gridy = 5;
+		gbc_button_9.gridy = 6;
 		contentPane.add(button_9, gbc_button_9);
 		
 		Button button_10 = new Button("X");
@@ -380,7 +381,7 @@ public class NewTicket extends JFrame {
 		gbc_button_10.fill = GridBagConstraints.BOTH;
 		gbc_button_10.insets = new Insets(0, 0, 5, 5);
 		gbc_button_10.gridx = 6;
-		gbc_button_10.gridy = 5;
+		gbc_button_10.gridy = 6;
 		contentPane.add(button_10, gbc_button_10);
 		
 		JLabel label_28 = new JLabel("");
@@ -388,7 +389,7 @@ public class NewTicket extends JFrame {
 		gbc_label_28.fill = GridBagConstraints.BOTH;
 		gbc_label_28.insets = new Insets(0, 0, 5, 5);
 		gbc_label_28.gridx = 7;
-		gbc_label_28.gridy = 5;
+		gbc_label_28.gridy = 6;
 		contentPane.add(label_28, gbc_label_28);
 		
 		JCheckBox chckbxFirst = new JCheckBox("First Class");
@@ -396,7 +397,7 @@ public class NewTicket extends JFrame {
 		gbc_chckbxFirst.fill = GridBagConstraints.BOTH;
 		gbc_chckbxFirst.insets = new Insets(0, 0, 5, 5);
 		gbc_chckbxFirst.gridx = 8;
-		gbc_chckbxFirst.gridy = 5;
+		gbc_chckbxFirst.gridy = 6;
 		contentPane.add(chckbxFirst, gbc_chckbxFirst);
 		
 		JLabel label_29 = new JLabel("");
@@ -404,7 +405,7 @@ public class NewTicket extends JFrame {
 		gbc_label_29.fill = GridBagConstraints.BOTH;
 		gbc_label_29.insets = new Insets(0, 0, 5, 0);
 		gbc_label_29.gridx = 9;
-		gbc_label_29.gridy = 5;
+		gbc_label_29.gridy = 6;
 		contentPane.add(label_29, gbc_label_29);
 		
 		JLabel label_30 = new JLabel("");
@@ -412,7 +413,7 @@ public class NewTicket extends JFrame {
 		gbc_label_30.fill = GridBagConstraints.BOTH;
 		gbc_label_30.insets = new Insets(0, 0, 5, 5);
 		gbc_label_30.gridx = 0;
-		gbc_label_30.gridy = 6;
+		gbc_label_30.gridy = 7;
 		contentPane.add(label_30, gbc_label_30);
 		
 		JLabel label_31 = new JLabel("");
@@ -420,7 +421,7 @@ public class NewTicket extends JFrame {
 		gbc_label_31.fill = GridBagConstraints.BOTH;
 		gbc_label_31.insets = new Insets(0, 0, 5, 5);
 		gbc_label_31.gridx = 1;
-		gbc_label_31.gridy = 6;
+		gbc_label_31.gridy = 7;
 		contentPane.add(label_31, gbc_label_31);
 		
 		Button button_1 = new Button("X");
@@ -429,7 +430,7 @@ public class NewTicket extends JFrame {
 		gbc_button_1.fill = GridBagConstraints.BOTH;
 		gbc_button_1.insets = new Insets(0, 0, 5, 5);
 		gbc_button_1.gridx = 2;
-		gbc_button_1.gridy = 6;
+		gbc_button_1.gridy = 7;
 		contentPane.add(button_1, gbc_button_1);
 		
 		Button button_4 = new Button("X");
@@ -438,7 +439,7 @@ public class NewTicket extends JFrame {
 		gbc_button_4.fill = GridBagConstraints.BOTH;
 		gbc_button_4.insets = new Insets(0, 0, 5, 5);
 		gbc_button_4.gridx = 3;
-		gbc_button_4.gridy = 6;
+		gbc_button_4.gridy = 7;
 		contentPane.add(button_4, gbc_button_4);
 		
 		JLabel label_32 = new JLabel("");
@@ -446,7 +447,7 @@ public class NewTicket extends JFrame {
 		gbc_label_32.fill = GridBagConstraints.BOTH;
 		gbc_label_32.insets = new Insets(0, 0, 5, 5);
 		gbc_label_32.gridx = 4;
-		gbc_label_32.gridy = 6;
+		gbc_label_32.gridy = 7;
 		contentPane.add(label_32, gbc_label_32);
 		
 		Button button_11 = new Button("X");
@@ -455,7 +456,7 @@ public class NewTicket extends JFrame {
 		gbc_button_11.fill = GridBagConstraints.BOTH;
 		gbc_button_11.insets = new Insets(0, 0, 5, 5);
 		gbc_button_11.gridx = 5;
-		gbc_button_11.gridy = 6;
+		gbc_button_11.gridy = 7;
 		contentPane.add(button_11, gbc_button_11);
 		
 		Button button_12 = new Button("X");
@@ -464,7 +465,7 @@ public class NewTicket extends JFrame {
 		gbc_button_12.fill = GridBagConstraints.BOTH;
 		gbc_button_12.insets = new Insets(0, 0, 5, 5);
 		gbc_button_12.gridx = 6;
-		gbc_button_12.gridy = 6;
+		gbc_button_12.gridy = 7;
 		contentPane.add(button_12, gbc_button_12);
 		
 		JLabel label_33 = new JLabel("");
@@ -472,7 +473,7 @@ public class NewTicket extends JFrame {
 		gbc_label_33.fill = GridBagConstraints.BOTH;
 		gbc_label_33.insets = new Insets(0, 0, 5, 5);
 		gbc_label_33.gridx = 7;
-		gbc_label_33.gridy = 6;
+		gbc_label_33.gridy = 7;
 		contentPane.add(label_33, gbc_label_33);
 		
 		JCheckBox chckbxBusinessClass = new JCheckBox("Business Class");
@@ -480,7 +481,7 @@ public class NewTicket extends JFrame {
 		gbc_chckbxBusinessClass.fill = GridBagConstraints.BOTH;
 		gbc_chckbxBusinessClass.insets = new Insets(0, 0, 5, 5);
 		gbc_chckbxBusinessClass.gridx = 8;
-		gbc_chckbxBusinessClass.gridy = 6;
+		gbc_chckbxBusinessClass.gridy = 7;
 		contentPane.add(chckbxBusinessClass, gbc_chckbxBusinessClass);
 		
 		JLabel label_34 = new JLabel("");
@@ -488,7 +489,7 @@ public class NewTicket extends JFrame {
 		gbc_label_34.fill = GridBagConstraints.BOTH;
 		gbc_label_34.insets = new Insets(0, 0, 5, 0);
 		gbc_label_34.gridx = 9;
-		gbc_label_34.gridy = 6;
+		gbc_label_34.gridy = 7;
 		contentPane.add(label_34, gbc_label_34);
 		
 		JLabel label_35 = new JLabel("");
@@ -496,7 +497,7 @@ public class NewTicket extends JFrame {
 		gbc_label_35.fill = GridBagConstraints.BOTH;
 		gbc_label_35.insets = new Insets(0, 0, 5, 5);
 		gbc_label_35.gridx = 0;
-		gbc_label_35.gridy = 7;
+		gbc_label_35.gridy = 8;
 		contentPane.add(label_35, gbc_label_35);
 		
 		JLabel label_36 = new JLabel("");
@@ -504,7 +505,7 @@ public class NewTicket extends JFrame {
 		gbc_label_36.fill = GridBagConstraints.BOTH;
 		gbc_label_36.insets = new Insets(0, 0, 5, 5);
 		gbc_label_36.gridx = 1;
-		gbc_label_36.gridy = 7;
+		gbc_label_36.gridy = 8;
 		contentPane.add(label_36, gbc_label_36);
 		
 		Button button_2 = new Button("X");
@@ -513,7 +514,7 @@ public class NewTicket extends JFrame {
 		gbc_button_2.fill = GridBagConstraints.BOTH;
 		gbc_button_2.insets = new Insets(0, 0, 5, 5);
 		gbc_button_2.gridx = 2;
-		gbc_button_2.gridy = 7;
+		gbc_button_2.gridy = 8;
 		contentPane.add(button_2, gbc_button_2);
 		
 		Button button_3 = new Button("X");
@@ -522,7 +523,7 @@ public class NewTicket extends JFrame {
 		gbc_button_3.fill = GridBagConstraints.BOTH;
 		gbc_button_3.insets = new Insets(0, 0, 5, 5);
 		gbc_button_3.gridx = 3;
-		gbc_button_3.gridy = 7;
+		gbc_button_3.gridy = 8;
 		contentPane.add(button_3, gbc_button_3);
 		
 		JLabel label_37 = new JLabel("");
@@ -530,7 +531,7 @@ public class NewTicket extends JFrame {
 		gbc_label_37.fill = GridBagConstraints.BOTH;
 		gbc_label_37.insets = new Insets(0, 0, 5, 5);
 		gbc_label_37.gridx = 4;
-		gbc_label_37.gridy = 7;
+		gbc_label_37.gridy = 8;
 		contentPane.add(label_37, gbc_label_37);
 		
 		Button button_13 = new Button("X");
@@ -539,7 +540,7 @@ public class NewTicket extends JFrame {
 		gbc_button_13.fill = GridBagConstraints.BOTH;
 		gbc_button_13.insets = new Insets(0, 0, 5, 5);
 		gbc_button_13.gridx = 5;
-		gbc_button_13.gridy = 7;
+		gbc_button_13.gridy = 8;
 		contentPane.add(button_13, gbc_button_13);
 		
 		Button button_14 = new Button("X");
@@ -548,7 +549,7 @@ public class NewTicket extends JFrame {
 		gbc_button_14.fill = GridBagConstraints.BOTH;
 		gbc_button_14.insets = new Insets(0, 0, 5, 5);
 		gbc_button_14.gridx = 6;
-		gbc_button_14.gridy = 7;
+		gbc_button_14.gridy = 8;
 		contentPane.add(button_14, gbc_button_14);
 		
 		JLabel label_38 = new JLabel("");
@@ -556,7 +557,7 @@ public class NewTicket extends JFrame {
 		gbc_label_38.fill = GridBagConstraints.BOTH;
 		gbc_label_38.insets = new Insets(0, 0, 5, 5);
 		gbc_label_38.gridx = 7;
-		gbc_label_38.gridy = 7;
+		gbc_label_38.gridy = 8;
 		contentPane.add(label_38, gbc_label_38);
 		
 		JLabel label_39 = new JLabel("");
@@ -564,7 +565,7 @@ public class NewTicket extends JFrame {
 		gbc_label_39.fill = GridBagConstraints.BOTH;
 		gbc_label_39.insets = new Insets(0, 0, 5, 5);
 		gbc_label_39.gridx = 8;
-		gbc_label_39.gridy = 7;
+		gbc_label_39.gridy = 8;
 		contentPane.add(label_39, gbc_label_39);
 		
 		JLabel label_40 = new JLabel("");
@@ -572,7 +573,7 @@ public class NewTicket extends JFrame {
 		gbc_label_40.fill = GridBagConstraints.BOTH;
 		gbc_label_40.insets = new Insets(0, 0, 5, 0);
 		gbc_label_40.gridx = 9;
-		gbc_label_40.gridy = 7;
+		gbc_label_40.gridy = 8;
 		contentPane.add(label_40, gbc_label_40);
 		
 		JLabel label_41 = new JLabel("");
@@ -580,7 +581,7 @@ public class NewTicket extends JFrame {
 		gbc_label_41.fill = GridBagConstraints.BOTH;
 		gbc_label_41.insets = new Insets(0, 0, 5, 5);
 		gbc_label_41.gridx = 0;
-		gbc_label_41.gridy = 8;
+		gbc_label_41.gridy = 9;
 		contentPane.add(label_41, gbc_label_41);
 		
 		JLabel label_42 = new JLabel("");
@@ -588,7 +589,7 @@ public class NewTicket extends JFrame {
 		gbc_label_42.fill = GridBagConstraints.BOTH;
 		gbc_label_42.insets = new Insets(0, 0, 5, 5);
 		gbc_label_42.gridx = 1;
-		gbc_label_42.gridy = 8;
+		gbc_label_42.gridy = 9;
 		contentPane.add(label_42, gbc_label_42);
 		
 		Button button_15 = new Button("X");
@@ -597,7 +598,7 @@ public class NewTicket extends JFrame {
 		gbc_button_15.fill = GridBagConstraints.BOTH;
 		gbc_button_15.insets = new Insets(0, 0, 5, 5);
 		gbc_button_15.gridx = 2;
-		gbc_button_15.gridy = 8;
+		gbc_button_15.gridy = 9;
 		contentPane.add(button_15, gbc_button_15);
 		
 		Button button_16 = new Button("X");
@@ -606,7 +607,7 @@ public class NewTicket extends JFrame {
 		gbc_button_16.fill = GridBagConstraints.BOTH;
 		gbc_button_16.insets = new Insets(0, 0, 5, 5);
 		gbc_button_16.gridx = 3;
-		gbc_button_16.gridy = 8;
+		gbc_button_16.gridy = 9;
 		contentPane.add(button_16, gbc_button_16);
 		
 		JLabel label_43 = new JLabel("");
@@ -614,7 +615,7 @@ public class NewTicket extends JFrame {
 		gbc_label_43.fill = GridBagConstraints.BOTH;
 		gbc_label_43.insets = new Insets(0, 0, 5, 5);
 		gbc_label_43.gridx = 4;
-		gbc_label_43.gridy = 8;
+		gbc_label_43.gridy = 9;
 		contentPane.add(label_43, gbc_label_43);
 		
 		Button button_17 = new Button("X");
@@ -623,7 +624,7 @@ public class NewTicket extends JFrame {
 		gbc_button_17.fill = GridBagConstraints.BOTH;
 		gbc_button_17.insets = new Insets(0, 0, 5, 5);
 		gbc_button_17.gridx = 5;
-		gbc_button_17.gridy = 8;
+		gbc_button_17.gridy = 9;
 		contentPane.add(button_17, gbc_button_17);
 		
 		Button button_18 = new Button("X");
@@ -632,7 +633,7 @@ public class NewTicket extends JFrame {
 		gbc_button_18.fill = GridBagConstraints.BOTH;
 		gbc_button_18.insets = new Insets(0, 0, 5, 5);
 		gbc_button_18.gridx = 6;
-		gbc_button_18.gridy = 8;
+		gbc_button_18.gridy = 9;
 		contentPane.add(button_18, gbc_button_18);
 		
 		JLabel label_44 = new JLabel("");
@@ -640,7 +641,7 @@ public class NewTicket extends JFrame {
 		gbc_label_44.fill = GridBagConstraints.BOTH;
 		gbc_label_44.insets = new Insets(0, 0, 5, 5);
 		gbc_label_44.gridx = 7;
-		gbc_label_44.gridy = 8;
+		gbc_label_44.gridy = 9;
 		contentPane.add(label_44, gbc_label_44);
 		
 		JLabel label_45 = new JLabel("");
@@ -648,7 +649,7 @@ public class NewTicket extends JFrame {
 		gbc_label_45.fill = GridBagConstraints.BOTH;
 		gbc_label_45.insets = new Insets(0, 0, 5, 5);
 		gbc_label_45.gridx = 8;
-		gbc_label_45.gridy = 8;
+		gbc_label_45.gridy = 9;
 		contentPane.add(label_45, gbc_label_45);
 		
 		JLabel label_46 = new JLabel("");
@@ -656,7 +657,7 @@ public class NewTicket extends JFrame {
 		gbc_label_46.fill = GridBagConstraints.BOTH;
 		gbc_label_46.insets = new Insets(0, 0, 5, 0);
 		gbc_label_46.gridx = 9;
-		gbc_label_46.gridy = 8;
+		gbc_label_46.gridy = 9;
 		contentPane.add(label_46, gbc_label_46);
 		
 		JLabel label_47 = new JLabel("");
@@ -664,7 +665,7 @@ public class NewTicket extends JFrame {
 		gbc_label_47.fill = GridBagConstraints.BOTH;
 		gbc_label_47.insets = new Insets(0, 0, 5, 5);
 		gbc_label_47.gridx = 0;
-		gbc_label_47.gridy = 9;
+		gbc_label_47.gridy = 10;
 		contentPane.add(label_47, gbc_label_47);
 		
 		JLabel label_48 = new JLabel("");
@@ -672,7 +673,7 @@ public class NewTicket extends JFrame {
 		gbc_label_48.fill = GridBagConstraints.BOTH;
 		gbc_label_48.insets = new Insets(0, 0, 5, 5);
 		gbc_label_48.gridx = 1;
-		gbc_label_48.gridy = 9;
+		gbc_label_48.gridy = 10;
 		contentPane.add(label_48, gbc_label_48);
 		
 		JLabel label_49 = new JLabel("");
@@ -680,7 +681,7 @@ public class NewTicket extends JFrame {
 		gbc_label_49.fill = GridBagConstraints.BOTH;
 		gbc_label_49.insets = new Insets(0, 0, 5, 5);
 		gbc_label_49.gridx = 4;
-		gbc_label_49.gridy = 9;
+		gbc_label_49.gridy = 10;
 		contentPane.add(label_49, gbc_label_49);
 		
 		JLabel label_50 = new JLabel("");
@@ -688,7 +689,7 @@ public class NewTicket extends JFrame {
 		gbc_label_50.fill = GridBagConstraints.BOTH;
 		gbc_label_50.insets = new Insets(0, 0, 5, 5);
 		gbc_label_50.gridx = 5;
-		gbc_label_50.gridy = 9;
+		gbc_label_50.gridy = 10;
 		contentPane.add(label_50, gbc_label_50);
 		
 		JLabel label_51 = new JLabel("");
@@ -696,7 +697,7 @@ public class NewTicket extends JFrame {
 		gbc_label_51.fill = GridBagConstraints.BOTH;
 		gbc_label_51.insets = new Insets(0, 0, 5, 5);
 		gbc_label_51.gridx = 6;
-		gbc_label_51.gridy = 9;
+		gbc_label_51.gridy = 10;
 		contentPane.add(label_51, gbc_label_51);
 		
 		JLabel label_52 = new JLabel("");
@@ -704,7 +705,7 @@ public class NewTicket extends JFrame {
 		gbc_label_52.fill = GridBagConstraints.BOTH;
 		gbc_label_52.insets = new Insets(0, 0, 5, 5);
 		gbc_label_52.gridx = 7;
-		gbc_label_52.gridy = 9;
+		gbc_label_52.gridy = 10;
 		contentPane.add(label_52, gbc_label_52);
 		
 		JLabel label_53 = new JLabel("");
@@ -712,7 +713,7 @@ public class NewTicket extends JFrame {
 		gbc_label_53.fill = GridBagConstraints.BOTH;
 		gbc_label_53.insets = new Insets(0, 0, 5, 5);
 		gbc_label_53.gridx = 8;
-		gbc_label_53.gridy = 9;
+		gbc_label_53.gridy = 10;
 		contentPane.add(label_53, gbc_label_53);
 		
 		JLabel label_54 = new JLabel("");
@@ -720,14 +721,15 @@ public class NewTicket extends JFrame {
 		gbc_label_54.insets = new Insets(0, 0, 5, 0);
 		gbc_label_54.fill = GridBagConstraints.BOTH;
 		gbc_label_54.gridx = 9;
-		gbc_label_54.gridy = 9;
+		gbc_label_54.gridy = 10;
 		contentPane.add(label_54, gbc_label_54);
 		
 		JLabel lblEconomy = new JLabel("ECONOMY");
 		GridBagConstraints gbc_lblEconomy = new GridBagConstraints();
+		gbc_lblEconomy.gridwidth = 5;
 		gbc_lblEconomy.insets = new Insets(0, 0, 5, 5);
 		gbc_lblEconomy.gridx = 2;
-		gbc_lblEconomy.gridy = 10;
+		gbc_lblEconomy.gridy = 11;
 		contentPane.add(lblEconomy, gbc_lblEconomy);
 		
 		Button button_22 = new Button("X");
@@ -735,7 +737,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_22 = new GridBagConstraints();
 		gbc_button_22.insets = new Insets(0, 0, 5, 5);
 		gbc_button_22.gridx = 2;
-		gbc_button_22.gridy = 11;
+		gbc_button_22.gridy = 13;
 		contentPane.add(button_22, gbc_button_22);
 		
 		Button button_21 = new Button("X");
@@ -743,7 +745,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_21 = new GridBagConstraints();
 		gbc_button_21.insets = new Insets(0, 0, 5, 5);
 		gbc_button_21.gridx = 3;
-		gbc_button_21.gridy = 11;
+		gbc_button_21.gridy = 13;
 		contentPane.add(button_21, gbc_button_21);
 		
 		Button button_26 = new Button("X");
@@ -751,7 +753,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_26 = new GridBagConstraints();
 		gbc_button_26.insets = new Insets(0, 0, 5, 5);
 		gbc_button_26.gridx = 5;
-		gbc_button_26.gridy = 11;
+		gbc_button_26.gridy = 13;
 		contentPane.add(button_26, gbc_button_26);
 		
 		Button button_27 = new Button("X");
@@ -759,14 +761,14 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_27 = new GridBagConstraints();
 		gbc_button_27.insets = new Insets(0, 0, 5, 5);
 		gbc_button_27.gridx = 6;
-		gbc_button_27.gridy = 11;
+		gbc_button_27.gridy = 13;
 		contentPane.add(button_27, gbc_button_27);
 		
 		lblFlug = new JLabel("Flug:");
 		GridBagConstraints gbc_lblFlug = new GridBagConstraints();
 		gbc_lblFlug.insets = new Insets(0, 0, 5, 5);
 		gbc_lblFlug.gridx = 8;
-		gbc_lblFlug.gridy = 11;
+		gbc_lblFlug.gridy = 13;
 		contentPane.add(lblFlug, gbc_lblFlug);
 		
 		Button button_23 = new Button("X");
@@ -774,7 +776,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_23 = new GridBagConstraints();
 		gbc_button_23.insets = new Insets(0, 0, 5, 5);
 		gbc_button_23.gridx = 2;
-		gbc_button_23.gridy = 12;
+		gbc_button_23.gridy = 14;
 		contentPane.add(button_23, gbc_button_23);
 		
 		Button button_24 = new Button("X");
@@ -782,7 +784,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_24 = new GridBagConstraints();
 		gbc_button_24.insets = new Insets(0, 0, 5, 5);
 		gbc_button_24.gridx = 3;
-		gbc_button_24.gridy = 12;
+		gbc_button_24.gridy = 14;
 		contentPane.add(button_24, gbc_button_24);
 		
 		Button button_25 = new Button("X");
@@ -790,7 +792,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_25 = new GridBagConstraints();
 		gbc_button_25.insets = new Insets(0, 0, 5, 5);
 		gbc_button_25.gridx = 5;
-		gbc_button_25.gridy = 12;
+		gbc_button_25.gridy = 14;
 		contentPane.add(button_25, gbc_button_25);
 		
 		Button button_28 = new Button("X");
@@ -798,14 +800,14 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_28 = new GridBagConstraints();
 		gbc_button_28.insets = new Insets(0, 0, 5, 5);
 		gbc_button_28.gridx = 6;
-		gbc_button_28.gridy = 12;
+		gbc_button_28.gridy = 14;
 		contentPane.add(button_28, gbc_button_28);
 		
 		lblPreis = new JLabel("Preis:");
 		GridBagConstraints gbc_lblPreis = new GridBagConstraints();
 		gbc_lblPreis.insets = new Insets(0, 0, 5, 5);
 		gbc_lblPreis.gridx = 8;
-		gbc_lblPreis.gridy = 12;
+		gbc_lblPreis.gridy = 14;
 		contentPane.add(lblPreis, gbc_lblPreis);
 		
 		Button button_32 = new Button("X");
@@ -813,7 +815,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_32 = new GridBagConstraints();
 		gbc_button_32.insets = new Insets(0, 0, 5, 5);
 		gbc_button_32.gridx = 2;
-		gbc_button_32.gridy = 13;
+		gbc_button_32.gridy = 15;
 		contentPane.add(button_32, gbc_button_32);
 		
 		Button button_31 = new Button("X");
@@ -821,7 +823,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_31 = new GridBagConstraints();
 		gbc_button_31.insets = new Insets(0, 0, 5, 5);
 		gbc_button_31.gridx = 3;
-		gbc_button_31.gridy = 13;
+		gbc_button_31.gridy = 15;
 		contentPane.add(button_31, gbc_button_31);
 		
 		Button button_30 = new Button("X");
@@ -829,7 +831,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_30 = new GridBagConstraints();
 		gbc_button_30.insets = new Insets(0, 0, 5, 5);
 		gbc_button_30.gridx = 5;
-		gbc_button_30.gridy = 13;
+		gbc_button_30.gridy = 15;
 		contentPane.add(button_30, gbc_button_30);
 		
 		Button button_29 = new Button("X");
@@ -837,7 +839,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_29 = new GridBagConstraints();
 		gbc_button_29.insets = new Insets(0, 0, 5, 5);
 		gbc_button_29.gridx = 6;
-		gbc_button_29.gridy = 13;
+		gbc_button_29.gridy = 15;
 		contentPane.add(button_29, gbc_button_29);
 		
 		Button button_33 = new Button("X");
@@ -845,7 +847,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_33 = new GridBagConstraints();
 		gbc_button_33.insets = new Insets(0, 0, 0, 5);
 		gbc_button_33.gridx = 2;
-		gbc_button_33.gridy = 14;
+		gbc_button_33.gridy = 16;
 		contentPane.add(button_33, gbc_button_33);
 		
 		Button button_34 = new Button("X");
@@ -853,7 +855,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_34 = new GridBagConstraints();
 		gbc_button_34.insets = new Insets(0, 0, 0, 5);
 		gbc_button_34.gridx = 3;
-		gbc_button_34.gridy = 14;
+		gbc_button_34.gridy = 16;
 		contentPane.add(button_34, gbc_button_34);
 		
 		Button button_35 = new Button("X");
@@ -861,7 +863,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_35 = new GridBagConstraints();
 		gbc_button_35.insets = new Insets(0, 0, 0, 5);
 		gbc_button_35.gridx = 5;
-		gbc_button_35.gridy = 14;
+		gbc_button_35.gridy = 16;
 		contentPane.add(button_35, gbc_button_35);
 		
 		Button button_36 = new Button("X");
@@ -869,7 +871,7 @@ public class NewTicket extends JFrame {
 		GridBagConstraints gbc_button_36 = new GridBagConstraints();
 		gbc_button_36.insets = new Insets(0, 0, 0, 5);
 		gbc_button_36.gridx = 6;
-		gbc_button_36.gridy = 14;
+		gbc_button_36.gridy = 16;
 		contentPane.add(button_36, gbc_button_36);
 	}
 
