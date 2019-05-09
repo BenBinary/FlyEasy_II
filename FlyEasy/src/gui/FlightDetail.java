@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import datenmodell.Flug;
+import datenmodell.FlugVerwaltung;
 
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;
@@ -126,6 +127,13 @@ public class FlightDetail extends JFrame {
 		contentPane.add(lblDatumData, gbc_lblDatumData);
 		
 		JButton btnFlugStornieren = new JButton("Flug stornieren");
+		btnFlugStornieren.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				FlugVerwaltung.remove(FlugVerwaltung.getID(flug));
+			}
+		});
 		GridBagConstraints gbc_btnFlugStornieren = new GridBagConstraints();
 		gbc_btnFlugStornieren.insets = new Insets(0, 0, 5, 5);
 		gbc_btnFlugStornieren.gridx = 1;

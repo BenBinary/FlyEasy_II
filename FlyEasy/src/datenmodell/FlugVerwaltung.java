@@ -18,6 +18,19 @@ public class FlugVerwaltung {
 	public List<Flug> getFluege() {
 		return fluege;
 	}
+	
+	
+	public static int getID(Flug flug) {
+		
+		if (fluege.contains(flug)) {
+			
+			return fluege.indexOf(flug);
+			
+		}
+		
+		return -1;
+		
+	}
 
 	public static void add(Flug flug) {
 		
@@ -28,7 +41,7 @@ public class FlugVerwaltung {
 		FlugVerwaltung.ser();
 	}
 
-	public void remove(int i) {
+	public static void remove(int i) {
 
 		fluege.remove(i);
 		

@@ -176,6 +176,7 @@ public class Start extends JFrame {
 			
 			listFlights.removeAll();
 			listFlights.setModel(dlm);
+			
 			//listFlights = new JList<Flug>(dlm);
 
 		}

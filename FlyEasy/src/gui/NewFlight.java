@@ -137,7 +137,7 @@ public class NewFlight extends JFrame {
 		
 			Flug flug = new Flug(cbDate.getSelectedItem().toString(), (Destinations)cbOrigin.getSelectedItem(), (Destinations)cbDest.getSelectedItem(), checkbox.isEnabled());
 			
-			FlugVerwaltung fw = new FlugVerwaltung();
+			//FlugVerwaltung fw = new FlugVerwaltung();
 			
 			FlugVerwaltung.add(flug);
 			System.out.println(FlugVerwaltung.ser());
