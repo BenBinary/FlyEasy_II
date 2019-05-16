@@ -1,4 +1,4 @@
-package datenmodell;
+package fachlogik;
 
 import java.io.FileOutputStream;
 import java.io.Serializable;

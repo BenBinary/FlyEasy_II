@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import datenmodell.Destinations;
-import datenmodell.Flug;
-import datenmodell.FlugVerwaltung;
+import fachlogik.Destinations;
+import fachlogik.Flug;
+import fachlogik.FlugVerwaltung;
 
 import javax.swing.JLabel;
 import javax.swing.JList;

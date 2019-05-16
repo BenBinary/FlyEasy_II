@@ -11,8 +11,8 @@ import java.util.LinkedList;
 import java.util.LinkedList;
 import java.util.List;
 
-import datenmodell.Destinations;
-import datenmodell.Flug;
+import fachlogik.Destinations;
+import fachlogik.Flug;
 
 public class Test_SER {
 	

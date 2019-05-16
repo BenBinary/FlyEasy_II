@@ -7,8 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import datenmodell.Flug;
-import datenmodell.FlugVerwaltung;
+import fachlogik.Flug;
+import fachlogik.FlugVerwaltung;
+import fachlogik.Flug;
 
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;

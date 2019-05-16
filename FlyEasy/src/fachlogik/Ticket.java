@@ -1,4 +1,4 @@
-package datenmodell;
+package fachlogik;
 
 public abstract class Ticket {
 	

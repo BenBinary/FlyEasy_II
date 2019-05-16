@@ -1,4 +1,4 @@
-package datenmodell;
+package fachlogik;
 
 public class Ticket_economy implements Ticket_general {
 

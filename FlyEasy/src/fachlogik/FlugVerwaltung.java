@@ -1,4 +1,4 @@
-package datenmodell;
+package fachlogik;
 
 import java.util.List;
 import java.io.File;
