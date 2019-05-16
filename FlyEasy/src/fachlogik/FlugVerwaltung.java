@@ -51,10 +51,12 @@ public class FlugVerwaltung {
 	public static Boolean ser() {
 	
 		File file = new File("fluege.ser");
-		try (FileOutputStream fos = new FileOutputStream(file); ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+		try (FileOutputStream fos = new FileOutputStream(file);
+			 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 			
 			oos.writeObject(fluege);
 			return true;
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -72,7 +74,8 @@ public class FlugVerwaltung {
 		
 		File file = new File("fluege.ser");
 
-		try (FileInputStream fis = new FileInputStream(file); ObjectInputStream ois = new ObjectInputStream(fis)) {
+		try (FileInputStream fis = new FileInputStream(file);
+			 ObjectInputStream ois = new ObjectInputStream(fis)) {
 
 			return (LinkedList<Flug>) ois.readObject();
 

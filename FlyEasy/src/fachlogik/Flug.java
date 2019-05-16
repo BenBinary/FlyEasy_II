@@ -5,6 +5,8 @@ import java.util.Date;
 
 public class Flug implements Serializable {
 
+	private static final long serialVersionUID = 7024505680571386182L;
+
 	Date startDatum;
 	Date landeDatum;
 
