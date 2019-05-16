@@ -1,25 +1,19 @@
 package gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridBagLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
 
 import fachlogik.Flug;
 
-import com.jgoodies.forms.layout.FormSpecs;
 import java.awt.Button;
 import java.awt.Color;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
-import java.awt.GridLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -59,10 +53,7 @@ public class NewTicket extends JFrame {
 		this();
 		
 		
-		lblFlug.setText("Flug: " + flug.getOrgin().toString() + " nach " + flug.getDestination().toString());
-		
-		
-		
+		lblFlug.setText("Flug: " + flug.getOrigin().toString() + " nach " + flug.getDestination().toString());
 	}
 	
 	
@@ -947,6 +938,5 @@ public class NewTicket extends JFrame {
 		
 	
 	}
-	
 
 }

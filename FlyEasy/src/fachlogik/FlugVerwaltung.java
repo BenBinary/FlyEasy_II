@@ -44,14 +44,11 @@ public class FlugVerwaltung {
 	public static void remove(int i) {
 
 		fluege.remove(i);
-		
-	
 	}
 
 
 	
 	public static Boolean ser() {
-		
 	
 		File file = new File("fluege.ser");
 		try (FileOutputStream fos = new FileOutputStream(file); ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -65,8 +62,7 @@ public class FlugVerwaltung {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 		return false;
 	}
 

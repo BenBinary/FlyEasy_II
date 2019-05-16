@@ -1,20 +1,16 @@
 package fachlogik;
 
-import java.io.FileOutputStream;
 import java.io.Serializable;
-import java.io.StreamTokenizer;
 import java.util.Date;
 
 public class Flug implements Serializable {
-	
-
 
 	Date startDatum;
 	Date landeDatum;
 
 	String startDatumString;
 	
-	Destinations orgin;
+	Destinations origin;
 	Destinations destination;
 	
 	String startID;
@@ -36,14 +32,14 @@ public class Flug implements Serializable {
 	
 	/**
 	 * @param startDatum
-	 * @param orgin
+	 * @param origin
 	 * @param destination
 	 * @param internationalFlight
 	 */
-	public Flug(String startDatum, Destinations orgin, Destinations destination, Boolean internationalFlight) {
+	public Flug(String startDatum, Destinations origin, Destinations destination, Boolean internationalFlight) {
 		super();
 		this.startDatumString = startDatum;
-		this.orgin = orgin;
+		this.origin = origin;
 		this.destination = destination;
 		this.internationalFlight = internationalFlight;
 	}
@@ -54,8 +50,8 @@ public class Flug implements Serializable {
 	}
 
 
-	public Destinations getOrgin() {
-		return orgin;
+	public Destinations getOrigin() {
+		return origin;
 	}
 
 
@@ -71,19 +67,13 @@ public class Flug implements Serializable {
 		if (startDatumString.isEmpty()) {
 			startDatumString = "";
 		}
-		return orgin + "--> " + destination + " \t \t \t " + startDatumString;
+		return origin + "--> " + destination + " \t \t \t " + startDatumString;
 	}
 	
 	
 	public void save() {
 		
-		
-		
 		System.out.println("Es wird gespeichert");
-		
-		
 	}
-	
-	
 
 }

@@ -1,8 +1,5 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -23,11 +20,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
 
-import java.util.Iterator;
 import java.awt.event.ActionEvent;
 
 
-import java.util.Date;
 
 public class NewFlight extends JFrame {
 
@@ -150,6 +145,5 @@ public class NewFlight extends JFrame {
 		});
 		btnSaveFlight.setBounds(32, 233, 291, 29);
 		contentPane.add(btnSaveFlight);
-
 	}
 }

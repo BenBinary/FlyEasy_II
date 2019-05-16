@@ -7,9 +7,4 @@ public interface Ticket_general {
 	
 
 	public Double berechnePreis();
-	
-	
-	
-	
-	
 }

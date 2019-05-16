@@ -1,6 +1,5 @@
 package gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.DefaultListModel;
@@ -8,14 +7,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import fachlogik.Destinations;
 import fachlogik.Flug;
 import fachlogik.FlugVerwaltung;
 
 import javax.swing.JLabel;
 import javax.swing.JList;
-import java.util.Observer;
-import java.util.Observable;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -23,10 +19,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import java.util.List;
-import java.util.LinkedList;
 import javax.swing.JScrollPane;
 import javax.swing.border.BevelBorder;
-import java.awt.Scrollbar;
 
 public class Start extends JFrame {
 

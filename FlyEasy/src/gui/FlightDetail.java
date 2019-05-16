@@ -1,22 +1,16 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import fachlogik.Flug;
 import fachlogik.FlugVerwaltung;
-import fachlogik.Flug;
 
-import java.awt.GridLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -180,11 +174,9 @@ public class FlightDetail extends JFrame {
 		
 		this();
 		this.flug = flug;
-		lblStartData.setText(flug.getOrgin().toString());
+		lblStartData.setText(flug.getOrigin().toString());
 		lblZielData.setText(flug.getDestination().toString());
 		lblDatumData.setText(flug.getStartDatumString());
-
-		
 	}
 
 }

@@ -20,6 +20,7 @@ public class Abfrage extends JDialog {
 			Abfrage dialog = new Abfrage();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
