@@ -1,3 +1,7 @@
+package fachlogik;
+
+// import noch ergänzen
+
 public class Passagiere {
 
     String name;
