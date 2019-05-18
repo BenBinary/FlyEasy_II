@@ -1,3 +1,7 @@
+package fachlogik;
+
+// import noch ergaenzen
+
 public class Adresse {
 
     String strasse;
