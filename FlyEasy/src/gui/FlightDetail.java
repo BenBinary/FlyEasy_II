@@ -48,8 +48,7 @@ public class FlightDetail extends JFrame {
 	 * Create the frame.
 	 */
 	public FlightDetail() {
-		
-		
+
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosed(WindowEvent arg0) {

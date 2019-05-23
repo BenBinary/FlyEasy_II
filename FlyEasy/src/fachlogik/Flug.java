@@ -32,7 +32,7 @@ public class Flug implements Serializable {
 
 	}
 
-
+    @Deprecated
 	public Flug(String startID, String landID) {
 		super();
 		this.startID = startID;

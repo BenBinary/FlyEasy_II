@@ -80,8 +80,6 @@ public class Start extends JFrame {
 				listFlights.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseClicked(MouseEvent e) {
-						
-						
 		
 						try {
 							
@@ -167,7 +165,6 @@ public class Start extends JFrame {
 				System.out.println("Iterieren der Flüge");
 			}
 
-			
 			listFlights.removeAll();
 			listFlights.setModel(dlm);
 			
