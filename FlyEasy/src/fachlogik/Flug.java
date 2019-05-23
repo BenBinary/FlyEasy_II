@@ -1,37 +1,40 @@
 package fachlogik;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Flug implements Serializable {
 
 	private static final long serialVersionUID = 7024505680571386182L;
 
+	List<Passagiere> passagiere = new ArrayList<>();
+
 	Date startDatum;
 	Date landeDatum;
-
 	String startDatumString;
-	
+
 	Destinations origin;
+
 	Destinations destination;
-	
 	String startID;
+
 	String landID;
-	
 	Boolean internationalFlight;
-	
+
 	public Flug() {
-		
+
 	}
-	
-	
+
+
 	public Flug(String startID, String landID) {
 		super();
 		this.startID = startID;
 		this.landID = landID;
 	}
-	
-	
+
+
 	/**
 	 * @param startDatum
 	 * @param origin
@@ -61,21 +64,29 @@ public class Flug implements Serializable {
 		return destination;
 	}
 
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		
+
 		if (startDatumString.isEmpty()) {
 			startDatumString = "";
 		}
 		return origin + "--> " + destination + " \t \t \t " + startDatumString;
 	}
-	
-	
+
+
 	public void save() {
-		
+
 		System.out.println("Es wird gespeichert");
 	}
 
+
+	public List<Passagiere> getPassagiere() {
+		return passagiere;
+	}
+
+	public void addPassagiere(Passagiere passagiere) {
+		this.passagiere.add(passagiere);
+	}
 }

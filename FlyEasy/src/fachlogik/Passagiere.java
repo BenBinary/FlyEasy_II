@@ -2,12 +2,15 @@ package fachlogik;
 
 // import noch ergänzen
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Passagiere {
 
     String name;
     List<Adresse> adresse = new ArrayList<>();
 
-    Public Passagiere(){}
+    public Passagiere(){}
 
     public Passagiere (String name, String strasse, String stadt) {
         this.name = name;
