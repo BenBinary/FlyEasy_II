@@ -7,6 +7,9 @@ import java.util.List;
 
 // Debugging bei pushen
 
+// Änderung von benedikt
+
+
 public class Flug implements Serializable {
 
 	private static final long serialVersionUID = 7024505680571386182L;
