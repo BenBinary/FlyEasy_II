@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+// Debugging bei pushen
+
 public class Flug implements Serializable {
 
 	private static final long serialVersionUID = 7024505680571386182L;
