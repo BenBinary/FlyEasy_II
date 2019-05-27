@@ -1,5 +1,6 @@
 package fachlogik;
 
+@Deprecated
 public class Flughafen {
 	
 	String stadt;

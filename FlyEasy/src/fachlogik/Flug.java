@@ -17,21 +17,22 @@ public class Flug implements Serializable {
 	List<Passagiere> passagiere = new ArrayList<>();
 
 	Date startDatum;
-	Date landeDatum;
+	Date landeDatum; //(noch) keine Nutzung
 
 	//TODO: Konvertierung String -> Date
 	String startDatumString;
 
 	Destinations origin;
-
 	Destinations destination;
-	String startID;
 
+	@Deprecated
+	String startID;
+	@Deprecated
 	String landID;
+
 	Boolean internationalFlight;
 
 	public Flug() {
-
 	}
 
     @Deprecated
@@ -82,9 +83,8 @@ public class Flug implements Serializable {
 		return origin + "--> " + destination + " \t \t \t " + startDatumString;
 	}
 
-
+    @Deprecated
 	public void save() {
-
 		System.out.println("Es wird gespeichert");
 	}
 
