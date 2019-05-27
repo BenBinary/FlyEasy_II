@@ -12,7 +12,7 @@ import java.util.LinkedList;
 
 public class FlugVerwaltung {
 
-	static List<Flug> fluege = new LinkedList<Flug>();
+	static List<Flug> fluege = new LinkedList<>();
 	//File file = new File("fluege.ser");
 
 	public List<Flug> getFluege() {
@@ -73,15 +73,17 @@ public class FlugVerwaltung {
 	}
 
 
-
 	public static LinkedList<Flug> deser() {
+
+        LinkedList<Flug> toBeReturned = new LinkedList<>();
 
 		File file = new File("fluege.ser");
 
 		try (FileInputStream fis = new FileInputStream(file);
 			 ObjectInputStream ois = new ObjectInputStream(fis)) {
 
-			return (LinkedList<Flug>) ois.readObject();
+//			return (LinkedList<Flug>) ois.readObject();
+            toBeReturned = (LinkedList<Flug>) ois.readObject();
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -97,7 +99,8 @@ public class FlugVerwaltung {
 			e.printStackTrace();
 		}
 
-		return null;
+//		return null;
+        return toBeReturned;
 	}
 
 }
