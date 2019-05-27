@@ -42,8 +42,12 @@ public class FlugVerwaltung {
 	}
 
 	public static void remove(int i) {
+		fluege = FlugVerwaltung.deser();
 
 		fluege.remove(i);
+
+		FlugVerwaltung.ser();
+
 	}
 
 
