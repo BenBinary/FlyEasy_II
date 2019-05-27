@@ -21,6 +21,9 @@ import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.JScrollPane;
 import javax.swing.border.BevelBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
 
 public class Start extends JFrame {
 
@@ -52,6 +55,21 @@ public class Start extends JFrame {
 	public Start() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 324);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Modus");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmAdmin = new JMenuItem("Admin");
+		mnNewMenu.add(mntmAdmin);
+		
+		JMenuItem mntmKunde = new JMenuItem("Kunde");
+		mnNewMenu.add(mntmKunde);
+		
+		JMenuItem mntmMenu = new JMenuItem("Menu");
+		menuBar.add(mntmMenu);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
