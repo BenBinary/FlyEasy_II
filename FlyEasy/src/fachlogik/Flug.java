@@ -15,7 +15,7 @@ public class Flug implements Serializable {
 	private static final long serialVersionUID = 7024505680571386182L;
 
 	List<Passagiere> passagiere = new ArrayList<>();
-
+// ToDo: 
 	Date startDatum;
 	Date landeDatum;
 	String startDatumString;
