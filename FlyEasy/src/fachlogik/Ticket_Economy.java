@@ -1,6 +1,6 @@
 package fachlogik;
 
-public class Ticket_business implements Ticket_general {
+public class Ticket_Economy implements Ticket_General {
 
 	@Override
 	public Double berechnePreis() {

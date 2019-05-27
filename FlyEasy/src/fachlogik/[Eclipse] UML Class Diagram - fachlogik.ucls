@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="fachlogik.Ticket_first" project="FlyEasy" 
+  <class id="1" language="java" name="fachlogik.Ticket_First" project="FlyEasy"
     file="/FlyEasy/FlyEasy/src/fachlogik/Ticket_first.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="74" y="50"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -10,7 +10,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="fachlogik.Ticket_general" project="FlyEasy" 
+  <interface id="2" language="java" name="fachlogik.Ticket_General" project="FlyEasy"
     file="/FlyEasy/FlyEasy/src/fachlogik/Ticket_general.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="254" y="288"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -55,7 +55,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="fachlogik.Ticket_economy" project="FlyEasy" 
+  <class id="7" language="java" name="fachlogik.Ticket_Economy" project="FlyEasy"
     file="/FlyEasy/FlyEasy/src/fachlogik/Ticket_economy.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="254" y="50"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
@@ -73,7 +73,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="fachlogik.Ticket_business" project="FlyEasy" 
+  <class id="9" language="java" name="fachlogik.Ticket_Business" project="FlyEasy"
     file="/FlyEasy/FlyEasy/src/fachlogik/Ticket_business.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="434" y="50"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 

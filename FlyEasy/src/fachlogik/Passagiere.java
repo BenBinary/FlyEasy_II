@@ -10,7 +10,8 @@ public class Passagiere {
     String name;
     List<Adresse> adresse = new ArrayList<>();
 
-    public Passagiere(){}
+    public Passagiere(){
+    }
 
     public Passagiere (String name, String strasse, String stadt) {
         this.name = name;

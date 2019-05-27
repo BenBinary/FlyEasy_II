@@ -5,10 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-// Debugging bei pushen
-
-// Änderung von benedikt
-
 
 public class Flug implements Serializable {
 
@@ -17,16 +13,13 @@ public class Flug implements Serializable {
 	List<Passagiere> passagiere = new ArrayList<>();
 
 	Date startDatum;
-	Date landeDatum; //(noch) keine Nutzung
+	Date landeDatum; // (noch) keine Nutzung
 
-	//TODO: Konvertierung String -> Date
+	// TODO: Konvertierung String -> Date
 	String startDatumString;
 
 	Destinations origin;
 	Destinations destination;
-
-	String test_Randy_2;
-	String test_bene_2;
 
 	@Deprecated
 	String startID;
@@ -44,7 +37,6 @@ public class Flug implements Serializable {
 		this.startID = startID;
 		this.landID = landID;
 	}
-
 
 	/**
 	 * @param startDatum

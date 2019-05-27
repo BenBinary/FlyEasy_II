@@ -75,7 +75,7 @@ public class FlugVerwaltung {
 
 
 	public static LinkedList<Flug> deser() {
-		
+
 		File file = new File("fluege.ser");
 
 		try (FileInputStream fis = new FileInputStream(file);
