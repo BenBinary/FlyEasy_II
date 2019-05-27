@@ -59,7 +59,7 @@ public class Start extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("New menu");
+		JMenu mnNewMenu = new JMenu("Modus");
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmAdmin = new JMenuItem("Admin");
