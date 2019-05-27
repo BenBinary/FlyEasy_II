@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.sun.xml.internal.bind.CycleRecoverable.Context;
+
 
 
 
@@ -20,6 +20,8 @@ public class db_connection {
 		try {
 				Connection con;
 				// jdbc:mysql://
+				
+				
 				con = DriverManager.getConnection("localhost:3306/flyeasy", "swt", "2019");
 				Statement statement = con.createStatement();
 				ResultSet rs = statement.executeQuery("Select * from fluege;");
