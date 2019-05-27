@@ -26,6 +26,7 @@ public class Flug implements Serializable {
 	Destinations destination;
 
 	String test_Randy_2;
+	String test_bene_2;
 
 	@Deprecated
 	String startID;
