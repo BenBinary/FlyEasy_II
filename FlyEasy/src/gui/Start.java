@@ -54,7 +54,7 @@ public class Start extends JFrame {
 	 */
 	public Start() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 324);
+		setBounds(100, 100, 450, 350);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -180,7 +180,7 @@ public class Start extends JFrame {
 			for (Flug f : fluege) {
 
 				dlm.addElement(f);
-				System.out.println("Iterieren der Flüge");
+				System.out.println("Iterieren der Flï¿½ge");
 			}
 
 			listFlights.removeAll();
