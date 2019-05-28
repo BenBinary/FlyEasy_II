@@ -84,21 +84,18 @@ public class FlugVerwaltung {
 
 //			return (LinkedList<Flug>) ois.readObject();
             toBeReturned = (LinkedList<Flug>) ois.readObject();
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			
+		}
+		catch (FileNotFoundException e) {
 			FlugVerwaltung.ser();
 			FlugVerwaltung.deser();
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+		}
+		catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 //		return null;
         return toBeReturned;
 	}
