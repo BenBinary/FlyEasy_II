@@ -1,7 +1,5 @@
 package fachlogik;
 
-// import noch ergänzen
-
 import java.util.ArrayList;
 import java.util.List;
 
