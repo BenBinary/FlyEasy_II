@@ -2,8 +2,13 @@ package daten;
 
 
 import java.sql.*;
+import java.util.LinkedList;
+
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
+
+import fachlogik.Destinations;
+import fachlogik.Flug;
 
 public class testConnection {
 	
@@ -52,6 +57,82 @@ public class testConnection {
 		
 	}
 	
+	
+	public static LinkedList<Flug> loadFlights() {
+		  
+		LinkedList<Flug> fluege = new LinkedList<>();
+		  
+
+		// Aufbau der SSH-Verbindung
+		try {
+			
+			go();
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// Connection con = DriverManager.getConnection("87.190.44.81:22", "Fly", "easy");
+		Connection con = null;
+		String driver = "com.mysql.cj.jdbc.Driver";
+		
+		String db = "FlyEasy";
+		String dbUser = "Fly";
+		String dbPasswd = "easy";
+		String url = "jdbc:mysql://" + rhost + ":" + lport + "/";
+		
+		try {
+			Class.forName(driver);
+			
+			con = DriverManager.getConnection(url+db, dbUser, dbPasswd);
+			
+			
+			try {
+				Statement st = con.createStatement();
+				String sql = "Select * from Flights";
+				
+				
+				ResultSet rs = st.executeQuery(sql);
+				
+				
+				while (rs.next()) {
+					
+					Flug flug = new Flug();
+				
+					flug.setOrigin(rs.getString(2));
+					flug.setDestination(rs.getString(3));
+					flug.setStartDatumString(rs.getString(4));
+					
+					System.out.println(rs.getString(3));
+					
+					
+					fluege.add(flug);
+				}
+				
+				
+				
+				
+				
+			} catch (SQLException s) {
+				
+				System.out.println("SQL statement is not executed");
+				
+			}
+			
+			
+			
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		  
+		  
+		return fluege;	  
+		  
+	}
 
 
 	public static void main(String[] args) {

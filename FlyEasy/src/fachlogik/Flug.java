@@ -84,6 +84,10 @@ public class Flug implements Serializable {
 	public Destinations getDestination() {
 		return destination;
 	}
+	
+	public void setStartDatumString(String startDatumString) {
+		this.startDatumString = startDatumString;
+	}
 
 
 	@Override
@@ -113,8 +117,18 @@ public class Flug implements Serializable {
 	public void setOrigin(Destinations origin) {
 		this.origin = origin;
 	}
+	
+	public void setOrigin(String origin) {
+		
+		this.origin = Destinations.valueOf(origin);
+	}
 
 	public void setDestination(Destinations destination) {
 		this.destination = destination;
 	}
+	
+	public void setDestination(String destination) {
+		this.destination = Destinations.valueOf(destination);
+	}
+	
 }

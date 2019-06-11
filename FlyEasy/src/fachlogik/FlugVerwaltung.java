@@ -10,6 +10,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.LinkedList;
 import daten.Serialisierung;
+import daten.testConnection;
 
 public class FlugVerwaltung {
 
@@ -131,7 +132,7 @@ public class FlugVerwaltung {
         return toBeReturned;
         */
 		
-		return Serialisierung.deser();
+		return testConnection.loadFlights();
 	}
 
 }
