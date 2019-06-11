@@ -21,12 +21,15 @@ import java.util.Date;
 import java.util.Calendar;
 
 import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 
 
 
 public class NewFlight extends JFrame {
 
 	private JPanel contentPane;
+	//private final Action action = new SwingAction();
 
 	/**
 	 * Launch the application.
@@ -52,6 +55,7 @@ public class NewFlight extends JFrame {
 	 * Create the frame.
 	 */
 	public NewFlight() {
+		setTitle("Neuen Flug anlegen");
 		
 		
 		// Globale Variablen
@@ -145,5 +149,29 @@ public class NewFlight extends JFrame {
 		});
 		btnSaveFlight.setBounds(32, 233, 291, 29);
 		contentPane.add(btnSaveFlight);
+		
+		JButton btnAnzeigeAusblenden = new JButton("Anzeige ausblenden");
+		btnAnzeigeAusblenden.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				setVisible(false);
+				dispose();
+				
+			}
+		});
+		//btnAnzeigeAusblenden.setAction(action);
+		btnAnzeigeAusblenden.setBounds(42, 274, 281, 29);
+		contentPane.add(btnAnzeigeAusblenden);
 	}
+	
+	/*
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
+	}
+	*/
 }
