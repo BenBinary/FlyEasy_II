@@ -20,6 +20,8 @@ public class Flug implements Serializable {
 	// TODO: Konvertierung String -> Date
 	String startDatumString;
 
+
+
 	Destinations origin;
 	Destinations destination;
 
@@ -54,6 +56,20 @@ public class Flug implements Serializable {
 		this.internationalFlight = internationalFlight;
 	}
 
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+	
+		if (this.origin == ((Flug)obj).origin &&  this.destination == ((Flug)obj).destination && this.getStartDatumString() == ((Flug)obj).getStartDatumString() ) {
+			return true;
+		} else {
+			
+			return false;
+		}
+		
+		
+	}
 
 	public String getStartDatumString() {
 		return startDatumString;
@@ -92,5 +108,13 @@ public class Flug implements Serializable {
 
 	public void addPassagiere(Passagiere passagiere) {
 		this.passagiere.add(passagiere);
+	}
+	
+	public void setOrigin(Destinations origin) {
+		this.origin = origin;
+	}
+
+	public void setDestination(Destinations destination) {
+		this.destination = destination;
 	}
 }

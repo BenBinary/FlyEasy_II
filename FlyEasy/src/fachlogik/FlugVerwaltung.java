@@ -22,19 +22,19 @@ public class FlugVerwaltung {
 	
 	public static int getID(Flug flug) {
 		
-		if (fluege.contains(flug)) {
+		//if (fluege.equals(flug)) {
+		fluege = FlugVerwaltung.deser();
+		return fluege.indexOf(flug);
 			
-			return fluege.indexOf(flug);
-			
-		}
 		
-		return -1;
+		// }
+		//return -1;
 		
 	}
 
 	public static void add(Flug flug) {
 		
-		fluege = FlugVerwaltung.deser();
+		
 
 		fluege.add(flug);
 		
@@ -48,6 +48,13 @@ public class FlugVerwaltung {
 
 		FlugVerwaltung.ser();
 
+	}
+	
+	// Methode um Flüge upzudaten
+	public static void update(int i, Flug flug) {
+		fluege = FlugVerwaltung.deser();
+		fluege.set(i, flug);
+		FlugVerwaltung.ser();
 	}
 
 
