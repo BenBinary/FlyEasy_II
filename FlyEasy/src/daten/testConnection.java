@@ -36,7 +36,7 @@ public class testConnection {
 
 			rhost = "127.0.0.1";
 			rport = 3000;
-			lport  = 4321;
+			lport  = 4322;
 			
 			// ESTABLISHING THE REMOTE CONNECTION
 			

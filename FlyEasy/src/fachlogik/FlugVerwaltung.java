@@ -81,24 +81,7 @@ public class FlugVerwaltung {
 	
 	public static Boolean save() {
 	
-		/*
-		File file = new File("fluege.ser");
-		try (FileOutputStream fos = new FileOutputStream(file);
-			 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-			
-			oos.writeObject(fluege);
-			return true;
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return false;
-		*/
+	
 		
 		return Serialisierung.ser(fluege);
 		
@@ -108,31 +91,6 @@ public class FlugVerwaltung {
 
 	public static LinkedList<Flug> load() {
 
-		
-		/*
-        LinkedList<Flug> toBeReturned = new LinkedList<>();
-
-		File file = new File("fluege.ser");
-
-		try (FileInputStream fis = new FileInputStream(file);
-			 ObjectInputStream ois = new ObjectInputStream(fis)) {
-
-            toBeReturned = (LinkedList<Flug>) ois.readObject();
-		}
-		catch (FileNotFoundException e) {
-			FlugVerwaltung.save();
-			FlugVerwaltung.load();
-			e.printStackTrace();
-		}
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-
-        return toBeReturned;
-        */
 		
 		return testConnection.loadFlights();
 	}
