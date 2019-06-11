@@ -2,7 +2,9 @@ package daten;
 
 
 import java.sql.*;
+import java.text.MessageFormat;
 import java.util.LinkedList;
+import java.util.List;
 
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
@@ -54,6 +56,70 @@ public class testConnection {
 		} catch (Exception e) {
 			System.err.print(e);
 		}
+		
+	}
+	
+	
+	public static Boolean saveFlights(List<Flug> fluege) {
+		
+		// Aufbau der SSH-Verbindung
+		try {
+			
+			go();
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// Connection con = DriverManager.getConnection("87.190.44.81:22", "Fly", "easy");
+		Connection con = null;
+		String driver = "com.mysql.cj.jdbc.Driver";
+		
+		String db = "FlyEasy";
+		String dbUser = "Fly";
+		String dbPasswd = "easy";
+		String url = "jdbc:mysql://" + rhost + ":" + lport + "/";
+		
+		try {
+			Class.forName(driver);
+			
+			con = DriverManager.getConnection(url+db, dbUser, dbPasswd);
+			
+			
+			try {
+				Statement st = con.createStatement();
+				String sql = "Select * from Flights";
+				
+				String insert_string = "";
+				int pk = 1;
+				
+				for (Flug flug : fluege) {
+					
+					insert_string += MessageFormat.format("INSERT INTO `FlyEasy`.`Flights` (`idFlights`, `src`, `dst`, `datum`) VALUES ('{0}', '{1}', '{2}', '{3}');\n", pk, flug.getOrigin().toString(), flug.getDestination().toString(), flug.getStartDatumString());
+					pk++;
+				}
+				
+				st.executeQuery(insert_string);
+				
+				
+				
+			} catch (SQLException s) {
+				
+				System.out.println("SQL statement is not executed");
+				
+			}
+			
+			
+			
+			con.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		  
+		return true;
 		
 	}
 	
