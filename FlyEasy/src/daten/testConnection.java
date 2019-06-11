@@ -43,8 +43,8 @@ public class testConnection {
 			
 			System.out.println(session.isConnected());
 			
-			int assinged_port = session.setPortForwardingL(lport, rhost, rport);
-			System.out.println("localhost:"+assinged_port+" -> "+rhost+":"+rport);
+			//int assinged_port = session.setPortForwardingL(lport, rhost, rport);
+			//System.out.println("localhost:"+assinged_port+" -> "+rhost+":"+rport);
 			 
 		} catch (Exception e) {
 			System.err.print(e);
@@ -70,23 +70,34 @@ public class testConnection {
 		// Connection con = DriverManager.getConnection("87.190.44.81:22", "Fly", "easy");
 		Connection con = null;
 		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://" + rhost + ":" + lport + "/";
+		
 		String db = "FlyEasy";
 		String dbUser = "Fly";
 		String dbPasswd = "easy";
+		String url = "jdbc:mysql://" + rhost + ":" + lport + "/";
 		
 		try {
 			Class.forName(driver);
+			
 			con = DriverManager.getConnection(url+db, dbUser, dbPasswd);
 			
-			/*
+			
 			try {
-			//	Statement st = con.createStatement();
-			//	String sql = "Select * from Flights";
+				Statement st = con.createStatement();
+				String sql = "Select * from Flights";
 				
 				
-				//ResultSet rs = st.executeQuery(sql);
-				//System.out.println(rs.toString());
+				ResultSet rs = st.executeQuery(sql);
+				
+				
+				while (rs.next()) {
+				
+					System.out.println(rs.getString(3));
+				}
+				
+				
+				
+				
 				
 			} catch (SQLException s) {
 				
@@ -94,7 +105,10 @@ public class testConnection {
 				
 			}
 			
-			*/
+			
+			
+			con.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
