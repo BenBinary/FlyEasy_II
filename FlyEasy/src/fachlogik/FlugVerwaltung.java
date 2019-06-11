@@ -22,9 +22,27 @@ public class FlugVerwaltung {
 	
 	public static int getID(Flug flug) {
 		
-		//if (fluege.equals(flug)) {
 		fluege = FlugVerwaltung.deser();
-		return fluege.indexOf(flug);
+		int i = 0;
+		
+		for (Flug f: fluege) {
+			
+			//  && f.getStartDatumString() == flug.getStartDatumString()
+			
+			
+			
+			if (f.destination == flug.destination && f.origin == flug.origin && f.getStartDatumString().equals(flug.getStartDatumString())) {
+				return i;
+			}
+			i++;
+		}
+		
+		return -1;
+			
+			
+		//if (fluege.equals(flug)) {
+		
+		//return fluege.indexOf(flug);
 			
 		
 		// }

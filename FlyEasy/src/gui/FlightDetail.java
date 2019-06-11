@@ -207,7 +207,15 @@ public class FlightDetail extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
+				// Entfernen des Elements aus der Liste
 				FlugVerwaltung.remove(FlugVerwaltung.getID(flug));
+				
+				Start.updateList();
+				
+				setVisible(false);
+				dispose();
+				
+			
 			}
 		});
 		GridBagConstraints gbc_btnFlugStornieren = new GridBagConstraints();
