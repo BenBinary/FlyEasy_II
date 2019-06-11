@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.LinkedList;
+import daten.Serialisierung;
 
 public class FlugVerwaltung {
 
@@ -22,7 +23,7 @@ public class FlugVerwaltung {
 	
 	public static int getID(Flug flug) {
 		
-		fluege = FlugVerwaltung.deser();
+		fluege = FlugVerwaltung.load();
 		int i = 0;
 		
 		for (Flug f: fluege) {
@@ -56,29 +57,30 @@ public class FlugVerwaltung {
 
 		fluege.add(flug);
 		
-		FlugVerwaltung.ser();
+		FlugVerwaltung.save();
 	}
 
 	public static void remove(int i) {
-		fluege = FlugVerwaltung.deser();
+		fluege = FlugVerwaltung.load();
 
 		fluege.remove(i);
 
-		FlugVerwaltung.ser();
+		FlugVerwaltung.save();
 
 	}
 	
 	// Methode um Flüge upzudaten
 	public static void update(int i, Flug flug) {
-		fluege = FlugVerwaltung.deser();
+		fluege = FlugVerwaltung.load();
 		fluege.set(i, flug);
-		FlugVerwaltung.ser();
+		FlugVerwaltung.save();
 	}
 
 
 	
-	public static Boolean ser() {
+	public static Boolean save() {
 	
+		/*
 		File file = new File("fluege.ser");
 		try (FileOutputStream fos = new FileOutputStream(file);
 			 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -95,11 +97,16 @@ public class FlugVerwaltung {
 		}
 
 		return false;
+		*/
+		
+		return Serialisierung.ser(fluege);
 	}
 
 
-	public static LinkedList<Flug> deser() {
+	public static LinkedList<Flug> load() {
 
+		
+		/*
         LinkedList<Flug> toBeReturned = new LinkedList<>();
 
 		File file = new File("fluege.ser");
@@ -107,12 +114,11 @@ public class FlugVerwaltung {
 		try (FileInputStream fis = new FileInputStream(file);
 			 ObjectInputStream ois = new ObjectInputStream(fis)) {
 
-//			return (LinkedList<Flug>) ois.readObject();
             toBeReturned = (LinkedList<Flug>) ois.readObject();
 		}
 		catch (FileNotFoundException e) {
-			FlugVerwaltung.ser();
-			FlugVerwaltung.deser();
+			FlugVerwaltung.save();
+			FlugVerwaltung.load();
 			e.printStackTrace();
 		}
 		catch (IOException e) {
@@ -121,8 +127,11 @@ public class FlugVerwaltung {
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-//		return null;
+
         return toBeReturned;
+        */
+		
+		return Serialisierung.deser();
 	}
 
 }

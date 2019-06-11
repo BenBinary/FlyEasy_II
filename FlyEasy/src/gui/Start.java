@@ -167,7 +167,7 @@ public class Start extends JFrame {
 
 	public static void updateList() {
 
-		List<Flug> fluege = FlugVerwaltung.deser();
+		List<Flug> fluege = FlugVerwaltung.load();
 		
 		if (!fluege.isEmpty()) {
 

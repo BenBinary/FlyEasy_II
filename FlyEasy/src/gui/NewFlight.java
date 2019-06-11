@@ -139,7 +139,7 @@ public class NewFlight extends JFrame {
 			//FlugVerwaltung fw = new FlugVerwaltung();
 			
 			FlugVerwaltung.add(flug);
-			System.out.println(FlugVerwaltung.ser());
+			System.out.println(FlugVerwaltung.save());
 
 			
 			Start.updateList();
