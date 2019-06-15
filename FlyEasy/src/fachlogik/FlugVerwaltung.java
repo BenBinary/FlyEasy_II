@@ -92,7 +92,8 @@ public class FlugVerwaltung {
 	public static LinkedList<Flug> load() {
 
 		
-		return testConnection.loadFlights();
+		return Serialisierung.deser();
+		//return testConnection.loadFlights();
 	}
 
 }

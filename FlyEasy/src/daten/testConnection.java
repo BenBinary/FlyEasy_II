@@ -18,7 +18,7 @@ public class testConnection {
 	static int lport;
 	static String rhost;
 	static int rport;
-	
+	static int assinged_port;
 	
 	public static void go() {
 		
@@ -32,11 +32,11 @@ public class testConnection {
 			Session session = jsch.getSession(user, host, port);
 
 			
-			// EINSTELLUNGEN FÃœR DIE DB
+			// EINSTELLUNGEN FÜR DIE DB
 
 			rhost = "127.0.0.1";
 			rport = 3000;
-			lport  = 4322;
+			lport  = 4321;
 			
 			// ESTABLISHING THE REMOTE CONNECTION
 			
@@ -50,7 +50,7 @@ public class testConnection {
 			
 			System.out.println(session.isConnected());
 			
-			//int assinged_port = session.setPortForwardingL(lport, rhost, rport);
+			assinged_port = session.setPortForwardingL(0, rhost, rport);
 			//System.out.println("localhost:"+assinged_port+" -> "+rhost+":"+rport);
 			 
 		} catch (Exception e) {
@@ -207,7 +207,7 @@ public class testConnection {
 		try {
 			
 			go();
-			
+			System.out.println("SSH-Tunnel wurde aufgebaut");
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -221,30 +221,31 @@ public class testConnection {
 		String db = "FlyEasy";
 		String dbUser = "Fly";
 		String dbPasswd = "easy";
-		String url = "jdbc:mysql://" + rhost + ":" + lport + "/";
+		
+		// EINSTELLUNGEN FÜR DIE DB
+		rhost = "localhost";
+		rport = 3000;
+		lport  = 4321;
+		
+
+
+		
+		String url = "jdbc:mysql://" + rhost + ":" + assinged_port + "/";
 		
 		try {
 			Class.forName(driver);
-			
+			System.out.println("Versuch Verbindung aufzubauen");
 			con = DriverManager.getConnection(url+db, dbUser, dbPasswd);
-			
+		
 			
 			try {
 				Statement st = con.createStatement();
 				String sql = "Select * from Flights";
-				
-				
 				ResultSet rs = st.executeQuery(sql);
-				
-				
 				while (rs.next()) {
 				
 					System.out.println(rs.getString(3));
 				}
-				
-				
-				
-				
 				
 			} catch (SQLException s) {
 				
@@ -252,11 +253,13 @@ public class testConnection {
 				
 			}
 			
-			
+		
 			
 			con.close();
 			
 		} catch (Exception e) {
+		
+			System.out.println("Fehler in der Verbindung");
 			e.printStackTrace();
 		}
 
