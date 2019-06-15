@@ -29,10 +29,7 @@ public class FlugVerwaltung {
 		
 		for (Flug f: fluege) {
 			
-			//  && f.getStartDatumString() == flug.getStartDatumString()
-			
-			
-			
+		
 			if (f.destination == flug.destination && f.origin == flug.origin && f.getStartDatumString().equals(flug.getStartDatumString())) {
 				return i;
 			}
@@ -41,23 +38,17 @@ public class FlugVerwaltung {
 		
 		return -1;
 			
-			
-		//if (fluege.equals(flug)) {
-		
-		//return fluege.indexOf(flug);
-			
-		
-		// }
-		//return -1;
 		
 	}
 
 	public static void add(Flug flug) {
 		
 		
-
+		// Hinzufgüen des Flugs zur Liste
 		fluege.add(flug);
 		
+		
+		// Aufrufen der statishcen Methode um das ganze zu sichern
 		FlugVerwaltung.save();
 	}
 
@@ -81,16 +72,13 @@ public class FlugVerwaltung {
 	
 	public static Boolean save() {
 	
-	
+		//return Serialisierung.ser(fluege);
+		return testConnection.saveFlights(fluege);
 		
-		return Serialisierung.ser(fluege);
-		
-		//return testConnection.saveFlights(fluege);
 	}
 
 
 	public static LinkedList<Flug> load() {
-
 		
 		//return Serialisierung.deser();
 		return testConnection.loadFlights();

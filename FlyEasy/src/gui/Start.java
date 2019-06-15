@@ -49,9 +49,6 @@ public class Start extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Start() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 350);
@@ -79,12 +76,6 @@ public class Start extends JFrame {
 
 		lblBitteWhlenSie.setBounds(15, 7, 264, 16);
 		contentPane.add(lblBitteWhlenSie);
-
-		//FlugVerwaltung.add(new Flug("20190505", Destinations.FRA, Destinations.DTM, false));
-		//FlugVerwaltung.add(new Flug("20190505", Destinations.FRA, Destinations.MIA, true));
-		//FlugVerwaltung.add(new Flug("20190505", Destinations.MUC, Destinations.GRU, true));
-
-		//verwaltung.ser();
 
 		updateList();
 		

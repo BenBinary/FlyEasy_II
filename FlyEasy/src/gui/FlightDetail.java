@@ -244,13 +244,14 @@ public class FlightDetail extends JFrame {
 	public FlightDetail(Flug flug) {
 
 		this();
+		cbOrigin.setSelectedItem(flug.getOrigin());
+		cbDest.setSelectedItem(flug.getDestination());
 		this.flug = flug;
 		//lblStartData.setText(flug.getOrigin().toString());
 		//lblZielData.setText(flug.getDestination().toString());
 		lblDatumData.setText(flug.getStartDatumString());
 
-		cbOrigin.setSelectedItem(flug.getOrigin());
-		cbDest.setSelectedItem(flug.getDestination());
+		
 
 
 	}
