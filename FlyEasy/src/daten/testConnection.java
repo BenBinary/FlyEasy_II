@@ -147,7 +147,7 @@ public class testConnection {
 		String db = "FlyEasy";
 		String dbUser = "Fly";
 		String dbPasswd = "easy";
-		String url = "jdbc:mysql://" + rhost + ":" + lport + "/";
+		String url = "jdbc:mysql://" + rhost + ":" + assinged_port + "/";
 		
 		try {
 			Class.forName(driver);
