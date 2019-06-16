@@ -10,7 +10,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.LinkedList;
 import daten.Serialisierung;
-import daten.testConnection;
+import daten.dbConnection;
+import daten.dbConnection;
 
 public class FlugVerwaltung {
 
@@ -61,6 +62,10 @@ public class FlugVerwaltung {
 
 	}
 	
+	public static void insert(Flug flug) {
+		
+	}
+	
 	// Methode um Flüge upzudaten
 	public static void update(int i, Flug flug) {
 		fluege = FlugVerwaltung.load();
@@ -73,7 +78,7 @@ public class FlugVerwaltung {
 	public static Boolean save() {
 	
 		//return Serialisierung.ser(fluege);
-		return testConnection.saveFlights(fluege);
+		return dbConnection.saveFlights(fluege);
 		
 	}
 
@@ -81,7 +86,7 @@ public class FlugVerwaltung {
 	public static LinkedList<Flug> load() {
 		
 		//return Serialisierung.deser();
-		return testConnection.loadFlights();
+		return dbConnection.loadFlights();
 	}
 
 }

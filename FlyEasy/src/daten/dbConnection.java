@@ -12,7 +12,7 @@ import com.jcraft.jsch.Session;
 import fachlogik.Destinations;
 import fachlogik.Flug;
 
-public class testConnection {
+public class dbConnection {
 	
 	
 	static int lport;
@@ -102,12 +102,41 @@ public class testConnection {
 	public static Boolean deleteFlights() {
 		
 		try {
+			
+			openDB();
 			Statement st = con.createStatement();
-			String 
+			con.close();
+			return true;
+			
+			
+			
+		} catch (Exception e) {
 			
 		}
+		
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 	
+	
+	public static Boolean insertFlight(Flug flug) {
+		
+		try {
+			Statement st = con.createStatement();
+			String sql = "";
+			return true;
+		} catch(Exception e) {
+			
+		}
+		
+		
+		return false;
+	}
 	
 	public static Boolean saveFlights(List<Flug> fluege) {
 		
