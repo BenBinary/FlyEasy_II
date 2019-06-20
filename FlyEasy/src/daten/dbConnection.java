@@ -62,6 +62,8 @@ public class dbConnection {
 		
 	}
 	
+
+	
 	// Methode um DB Connection herzustellen
 	public static Boolean openDB() {
 		
@@ -100,6 +102,27 @@ public class dbConnection {
 		
 	}
 	
+	public static Boolean updateFlight(int pk, Flug flug) {
+		
+		
+		String sql = "UPDATE `FlyEasy`.`Flights` SET `src` = '" + flug.getOrigin() + "', `dst` = '" + flug.getDestination() +"' WHERE (`idFlights` = '" + pk +  "');";
+	
+		try {
+			openDB();
+			Statement st = con.createStatement();
+			st.executeUpdate(sql);
+			con.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
+		
+		return false;
+		
+	}
+	
 	public static Boolean deleteFlights() {
 		
 		try {
@@ -123,7 +146,6 @@ public class dbConnection {
 		}
 		return false;
 	}
-	
 	
 	public static Boolean insertFlight(Flug flug) {
 		Formatter formatter = new Formatter();
@@ -253,7 +275,9 @@ public class dbConnection {
 				while (rs.next()) {
 					
 					Flug flug = new Flug();
-				
+					//flug.setPrimaryKey(rs.getInt(1));
+					flug.setPrimaryKey(rs.getString(1));
+					
 					flug.setOrigin(rs.getString(2));
 					flug.setDestination(rs.getString(3));
 					flug.setStartDatumString(rs.getString(4));
@@ -286,6 +310,7 @@ public class dbConnection {
 		return fluege;	  
 		  
 	}
+
 
 
 	public static void main(String[] args) {
@@ -352,4 +377,6 @@ public class dbConnection {
 
 	}
 
+	
+	
 }

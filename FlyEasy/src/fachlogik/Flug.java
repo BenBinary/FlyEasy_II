@@ -20,6 +20,8 @@ public class Flug implements Serializable {
 	// TODO: Konvertierung String -> Date
 	String startDatumString;
 
+	Integer primaryKey;
+
 	Destinations origin;
 	Destinations destination;
 
@@ -127,6 +129,17 @@ public class Flug implements Serializable {
 	
 	public void setDestination(String destination) {
 		this.destination = Destinations.valueOf(destination);
+	}
+
+	public Integer getPrimaryKey() {
+		return primaryKey;
+	}
+
+	public void setPrimaryKey(String primaryKey) {
+		int pk;
+		
+		pk = Integer.parseInt(primaryKey);
+		this.primaryKey = pk;
 	}
 	
 }

@@ -113,7 +113,7 @@ public class FlightDetail extends JFrame {
 
 							if (i != -1) {
 								flug.setOrigin((Destinations) cbOrigin.getSelectedItem());
-								FlugVerwaltung.update(i, flug);
+								FlugVerwaltung.update(flug.getPrimaryKey(), flug);
 							
 								Start.updateList(); 
 								System.out.println("Flug wurde geändert");
@@ -157,7 +157,7 @@ public class FlightDetail extends JFrame {
 
 							if (i != -1) {
 								flug.setDestination((Destinations) cbDest.getSelectedItem());
-								FlugVerwaltung.update(i, flug);
+								FlugVerwaltung.update(flug.getPrimaryKey(), flug);
 							
 								Start.updateList(); 
 								System.out.println("Flug wurde geändert");
