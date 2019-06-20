@@ -20,8 +20,6 @@ public class Flug implements Serializable {
 	// TODO: Konvertierung String -> Date
 	String startDatumString;
 
-
-
 	Destinations origin;
 	Destinations destination;
 
