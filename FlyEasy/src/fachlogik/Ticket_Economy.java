@@ -1,11 +1,13 @@
 package fachlogik;
 
-public class Ticket_Economy implements Ticket_General {
+public class Ticket_Economy extends Ticket_General {
 
-	@Override
-	public Double berechnePreis() {
-		// TODO Auto-generated method stub
-		return null;
+	public Ticket_Economy() {
+		super();
+	}
+
+	public String printInfo() {
+		return getFlug().toString() + getPrice();
 	}
 
 }

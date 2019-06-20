@@ -1,11 +1,13 @@
 package fachlogik;
 
-public class Ticket_Business implements Ticket_General {
+public class Ticket_Business extends Ticket_General {
 
-	@Override
-	public Double berechnePreis() {
-		// TODO Auto-generated method stub
-		return null;
+	public Ticket_Business() {
+		super();
+	}
+
+	public String printInfo() {
+		return getFlug().toString() + getPrice();
 	}
 
 }
