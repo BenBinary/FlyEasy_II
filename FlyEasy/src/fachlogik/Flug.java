@@ -19,7 +19,11 @@ public class Flug implements Serializable {
 
 	// TODO: Konvertierung String -> Date
 	String startDatumString;
+<<<<<<< HEAD
 	Integer primaryKey;
+=======
+
+>>>>>>> branch 'master' of https://github.com/BenBinary94/FlyEasy_II.git
 	Destinations origin;
 	Destinations destination;
 
