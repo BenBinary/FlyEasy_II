@@ -70,9 +70,11 @@ public class FlugVerwaltung {
 	
 	// Methode um Flüge upzudaten
 	public static void update(int i, Flug flug) {
-		fluege = FlugVerwaltung.load();
-		fluege.set(i, flug);
-		FlugVerwaltung.save();
+		//fluege = FlugVerwaltung.load();
+		//fluege.set(i, flug);
+		//FlugVerwaltung.save();
+		
+		dbConnection.updateFlight(i, flug);
 	}
 
 
