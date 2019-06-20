@@ -11,6 +11,7 @@ import java.io.ObjectOutputStream;
 import java.util.LinkedList;
 import daten.Serialisierung;
 import daten.dbConnection;
+import gui.Start;
 import daten.dbConnection;
 
 public class FlugVerwaltung {
@@ -63,7 +64,8 @@ public class FlugVerwaltung {
 	}
 	
 	public static void insert(Flug flug) {
-		
+		dbConnection.insertFlight(flug);
+		//Start.updateList();
 	}
 	
 	// Methode um Flüge upzudaten

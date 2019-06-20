@@ -3,6 +3,7 @@ package daten;
 
 import java.sql.*;
 import java.text.MessageFormat;
+import java.util.Formatter;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -125,12 +126,22 @@ public class dbConnection {
 	
 	
 	public static Boolean insertFlight(Flug flug) {
+		Formatter formatter = new Formatter();
+		openDB();
 		
 		try {
+			//con = DriverManager.getConnection(url+db, dbUser, dbPasswd);
 			Statement st = con.createStatement();
-			String sql = "";
+			
+			String sql = String.format("INSERT INTO `FlyEasy`.`Flights` (`src`, `dst`, `datum`) VALUES ('%s', '%s', '%s');", flug.getOrigin().toString(), flug.getDestination().toString(), "2019-05-05");
+			st.executeUpdate(sql);
+			con.close();
+			System.out.println("Neuen Flug anlegen erfolgreich ausgeführt");
 			return true;
 		} catch(Exception e) {
+			
+			System.out.println("Problem beim anlegen eines neuen Flugs");
+			System.out.println(e);
 			
 		}
 		
