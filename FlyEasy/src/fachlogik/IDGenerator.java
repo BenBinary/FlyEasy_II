@@ -8,7 +8,7 @@ public final class IDGenerator {
     private int IDNumber = 0;
 
 
-    public IDGenerator() {
+    private IDGenerator() {
     }
 
     public static IDGenerator instance() {
